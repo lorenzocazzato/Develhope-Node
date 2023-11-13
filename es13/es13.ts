@@ -1,15 +1,11 @@
 import { Request, Response } from "express";
 import Joi from "joi";
 
-// Dummy database of planets
 let planets = [
-  { id: 1, name: "Mercury" },
-  { id: 2, name: "Venus" },
-  { id: 3, name: "Earth" },
-  // ... other planets
+  { id: 1, name: "Earth" },
+  { id: 2, name: "Mars" },
 ];
 
-// Validation schema for planet
 const planetSchema = Joi.object({
   name: Joi.string().required(),
 });
